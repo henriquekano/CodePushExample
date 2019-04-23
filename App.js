@@ -22,7 +22,7 @@ class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Text>EITAAAAAAA3</Text>
+        <Text>EITAAAAAAA4</Text>
         <Text style={styles.welcome}>Welcome to React Native!</Text>
         <Text style={styles.instructions}>To get started, edit App.js</Text>
         <Text style={styles.instructions}>{instructions}</Text>
@@ -50,6 +50,9 @@ const styles = StyleSheet.create({
   },
 });
 
-const codePushConfig = { checkFrequency: codePush.CheckFrequency.ON_APP_RESUME }
+const codePushConfig = {
+  checkFrequency: codePush.CheckFrequency.ON_APP_RESUME,
+  installMode: codePush.InstallMode.ON_NEXT_RESUME
+}
 
 export default codePush(codePushConfig)(App)
